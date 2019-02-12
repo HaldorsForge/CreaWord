@@ -1,0 +1,1155 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <metadata name="menuStrip.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 17</value>
+  </metadata>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="menuStrip.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
+  </data>
+  <data name="menuStrip.Size" type="System.Drawing.Size, System.Drawing">
+    <value>784, 24</value>
+  </data>
+  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="menuStrip.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="menuStrip.Text" xml:space="preserve">
+    <value>Menü</value>
+  </data>
+  <data name="&gt;&gt;menuStrip.Name" xml:space="preserve">
+    <value>menuStrip</value>
+  </data>
+  <data name="&gt;&gt;menuStrip.Type" xml:space="preserve">
+    <value>System.Windows.Forms.MenuStrip, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;menuStrip.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;menuStrip.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="menuDatei.Size" type="System.Drawing.Size, System.Drawing">
+    <value>46, 20</value>
+  </data>
+  <data name="menuDatei.Text" xml:space="preserve">
+    <value>Datei</value>
+  </data>
+  <data name="menuitemDateiNeu.Size" type="System.Drawing.Size, System.Drawing">
+    <value>133, 22</value>
+  </data>
+  <data name="menuitemDateiNeu.Text" xml:space="preserve">
+    <value>Neu</value>
+  </data>
+  <data name="menuitemNeuWuerfeln.Size" type="System.Drawing.Size, System.Drawing">
+    <value>116, 22</value>
+  </data>
+  <data name="menuitemNeuWuerfeln.Text" xml:space="preserve">
+    <value>Würfeln</value>
+  </data>
+  <data name="menuitemNeuListen.Size" type="System.Drawing.Size, System.Drawing">
+    <value>116, 22</value>
+  </data>
+  <data name="menuitemNeuListen.Text" xml:space="preserve">
+    <value>Liste</value>
+  </data>
+  <data name="toolStripMenuItem1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>130, 6</value>
+  </data>
+  <data name="menuitemSateiSpeichern.Size" type="System.Drawing.Size, System.Drawing">
+    <value>133, 22</value>
+  </data>
+  <data name="menuitemSateiSpeichern.Text" xml:space="preserve">
+    <value>Speichern</value>
+  </data>
+  <data name="menuitemDateiExport.Size" type="System.Drawing.Size, System.Drawing">
+    <value>133, 22</value>
+  </data>
+  <data name="menuitemDateiExport.Text" xml:space="preserve">
+    <value>Exportieren</value>
+  </data>
+  <data name="toolStripMenuItem2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>130, 6</value>
+  </data>
+  <data name="menuitemDateiDruck.Size" type="System.Drawing.Size, System.Drawing">
+    <value>133, 22</value>
+  </data>
+  <data name="menuitemDateiDruck.Text" xml:space="preserve">
+    <value>Drucken</value>
+  </data>
+  <data name="toolStripMenuItem3.Size" type="System.Drawing.Size, System.Drawing">
+    <value>130, 6</value>
+  </data>
+  <data name="menuitemDateiBeenden.Size" type="System.Drawing.Size, System.Drawing">
+    <value>133, 22</value>
+  </data>
+  <data name="menuitemDateiBeenden.Text" xml:space="preserve">
+    <value>Beenden</value>
+  </data>
+  <data name="menuBearbeiten.Size" type="System.Drawing.Size, System.Drawing">
+    <value>75, 20</value>
+  </data>
+  <data name="menuBearbeiten.Text" xml:space="preserve">
+    <value>Bearbeiten</value>
+  </data>
+  <data name="menuitemBeaWort.Size" type="System.Drawing.Size, System.Drawing">
+    <value>123, 22</value>
+  </data>
+  <data name="menuitemBeaWort.Text" xml:space="preserve">
+    <value>Wörter</value>
+  </data>
+  <data name="menuitemBeaFavo.Size" type="System.Drawing.Size, System.Drawing">
+    <value>123, 22</value>
+  </data>
+  <data name="menuitemBeaFavo.Text" xml:space="preserve">
+    <value>Favoriten</value>
+  </data>
+  <data name="menuitemBeaListen.Size" type="System.Drawing.Size, System.Drawing">
+    <value>123, 22</value>
+  </data>
+  <data name="menuitemBeaListen.Text" xml:space="preserve">
+    <value>Listen</value>
+  </data>
+  <data name="menuEinstellungen.Size" type="System.Drawing.Size, System.Drawing">
+    <value>90, 20</value>
+  </data>
+  <data name="menuEinstellungen.Text" xml:space="preserve">
+    <value>Einstellungen</value>
+  </data>
+  <data name="menuitemEinstOption.Size" type="System.Drawing.Size, System.Drawing">
+    <value>177, 22</value>
+  </data>
+  <data name="menuitemEinstOption.Text" xml:space="preserve">
+    <value>Optionen</value>
+  </data>
+  <data name="spracheToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>116, 22</value>
+  </data>
+  <data name="spracheToolStripMenuItem.Text" xml:space="preserve">
+    <value>Sprache</value>
+  </data>
+  <data name="menuitemEinstDesign.Size" type="System.Drawing.Size, System.Drawing">
+    <value>177, 22</value>
+  </data>
+  <data name="menuitemEinstDesign.Text" xml:space="preserve">
+    <value>Design</value>
+  </data>
+  <data name="toolStripMenuItem4.Size" type="System.Drawing.Size, System.Drawing">
+    <value>174, 6</value>
+  </data>
+  <data name="menuitemEinstWerk.Size" type="System.Drawing.Size, System.Drawing">
+    <value>177, 22</value>
+  </data>
+  <data name="menuitemEinstWerk.Text" xml:space="preserve">
+    <value>Werkseinstellungen</value>
+  </data>
+  <data name="menuHilfe.Size" type="System.Drawing.Size, System.Drawing">
+    <value>44, 20</value>
+  </data>
+  <data name="menuHilfe.Text" xml:space="preserve">
+    <value>Hilfe</value>
+  </data>
+  <data name="menuitemHilfeTut.Size" type="System.Drawing.Size, System.Drawing">
+    <value>157, 22</value>
+  </data>
+  <data name="menuitemHilfeTut.Text" xml:space="preserve">
+    <value>Tutorial</value>
+  </data>
+  <data name="menuitemHilfeDoku.Size" type="System.Drawing.Size, System.Drawing">
+    <value>157, 22</value>
+  </data>
+  <data name="menuitemHilfeDoku.Text" xml:space="preserve">
+    <value>Dokumentation</value>
+  </data>
+  <data name="menuitemHilfeFAQ.Size" type="System.Drawing.Size, System.Drawing">
+    <value>157, 22</value>
+  </data>
+  <data name="menuitemHilfeFAQ.Text" xml:space="preserve">
+    <value>FAQ</value>
+  </data>
+  <data name="menuInfo.Size" type="System.Drawing.Size, System.Drawing">
+    <value>40, 20</value>
+  </data>
+  <data name="menuInfo.Text" xml:space="preserve">
+    <value>Info</value>
+  </data>
+  <data name="menuitemInfoDev.Size" type="System.Drawing.Size, System.Drawing">
+    <value>134, 22</value>
+  </data>
+  <data name="menuitemInfoDev.Text" xml:space="preserve">
+    <value>Entwickler</value>
+  </data>
+  <data name="menuitemInfoCrea.Size" type="System.Drawing.Size, System.Drawing">
+    <value>134, 22</value>
+  </data>
+  <data name="menuitemInfoCrea.Text" xml:space="preserve">
+    <value>CreaWord</value>
+  </data>
+  <data name="menuitemInfoFeedb.Size" type="System.Drawing.Size, System.Drawing">
+    <value>134, 22</value>
+  </data>
+  <data name="menuitemInfoFeedb.Text" xml:space="preserve">
+    <value>Feedback</value>
+  </data>
+  <data name="menuitemInfoHash.Size" type="System.Drawing.Size, System.Drawing">
+    <value>134, 22</value>
+  </data>
+  <data name="menuitemInfoHash.Text" xml:space="preserve">
+    <value>#</value>
+  </data>
+  <data name="menuitemInfoVers.Size" type="System.Drawing.Size, System.Drawing">
+    <value>134, 22</value>
+  </data>
+  <data name="menuitemInfoVers.Text" xml:space="preserve">
+    <value>Version</value>
+  </data>
+  <data name="menuitemInfoAGB.Size" type="System.Drawing.Size, System.Drawing">
+    <value>134, 22</value>
+  </data>
+  <data name="menuitemInfoAGB.Text" xml:space="preserve">
+    <value>AGB/Lizens</value>
+  </data>
+  <metadata name="backgroundWorker1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>132, 17</value>
+  </metadata>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="tabWuerfeln.BackgroundImageLayout" type="System.Windows.Forms.ImageLayout, System.Windows.Forms">
+    <value>None</value>
+  </data>
+  <data name="textBox1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>313, 12</value>
+  </data>
+  <data name="textBox1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>455, 20</value>
+  </data>
+  <data name="textBox1.TabIndex" type="System.Int32, mscorlib">
+    <value>17</value>
+  </data>
+  <data name="&gt;&gt;textBox1.Name" xml:space="preserve">
+    <value>textBox1</value>
+  </data>
+  <data name="&gt;&gt;textBox1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;textBox1.Parent" xml:space="preserve">
+    <value>tabWuerfeln</value>
+  </data>
+  <data name="&gt;&gt;textBox1.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="btnReset.Location" type="System.Drawing.Point, System.Drawing">
+    <value>232, 9</value>
+  </data>
+  <data name="btnReset.Size" type="System.Drawing.Size, System.Drawing">
+    <value>75, 23</value>
+  </data>
+  <data name="btnReset.TabIndex" type="System.Int32, mscorlib">
+    <value>16</value>
+  </data>
+  <data name="btnReset.Text" xml:space="preserve">
+    <value>Reset</value>
+  </data>
+  <data name="&gt;&gt;btnReset.Name" xml:space="preserve">
+    <value>btnReset</value>
+  </data>
+  <data name="&gt;&gt;btnReset.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;btnReset.Parent" xml:space="preserve">
+    <value>tabWuerfeln</value>
+  </data>
+  <data name="&gt;&gt;btnReset.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="cbWortanzahl.Items" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="cbWortanzahl.Items1" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="cbWortanzahl.Items2" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="cbWortanzahl.Items3" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="cbWortanzahl.Items4" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="cbWortanzahl.Items5" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="cbWortanzahl.Items6" xml:space="preserve">
+    <value>6</value>
+  </data>
+  <data name="cbWortanzahl.Items7" xml:space="preserve">
+    <value>7</value>
+  </data>
+  <data name="cbWortanzahl.Items8" xml:space="preserve">
+    <value>8</value>
+  </data>
+  <data name="cbWortanzahl.Items9" xml:space="preserve">
+    <value>9</value>
+  </data>
+  <data name="cbWortanzahl.Location" type="System.Drawing.Point, System.Drawing">
+    <value>78, 11</value>
+  </data>
+  <data name="cbWortanzahl.MaxLength" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="cbWortanzahl.Size" type="System.Drawing.Size, System.Drawing">
+    <value>34, 21</value>
+  </data>
+  <data name="cbWortanzahl.TabIndex" type="System.Int32, mscorlib">
+    <value>15</value>
+  </data>
+  <data name="&gt;&gt;cbWortanzahl.Name" xml:space="preserve">
+    <value>cbWortanzahl</value>
+  </data>
+  <data name="&gt;&gt;cbWortanzahl.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;cbWortanzahl.Parent" xml:space="preserve">
+    <value>tabWuerfeln</value>
+  </data>
+  <data name="&gt;&gt;cbWortanzahl.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="flowpanelOptButtons.Location" type="System.Drawing.Point, System.Drawing">
+    <value>8, 470</value>
+  </data>
+  <data name="flowpanelOptButtons.Size" type="System.Drawing.Size, System.Drawing">
+    <value>760, 32</value>
+  </data>
+  <data name="flowpanelOptButtons.TabIndex" type="System.Int32, mscorlib">
+    <value>14</value>
+  </data>
+  <data name="&gt;&gt;flowpanelOptButtons.Name" xml:space="preserve">
+    <value>flowpanelOptButtons</value>
+  </data>
+  <data name="&gt;&gt;flowpanelOptButtons.Type" xml:space="preserve">
+    <value>System.Windows.Forms.FlowLayoutPanel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;flowpanelOptButtons.Parent" xml:space="preserve">
+    <value>tabWuerfeln</value>
+  </data>
+  <data name="&gt;&gt;flowpanelOptButtons.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="flowpanelWort.Location" type="System.Drawing.Point, System.Drawing">
+    <value>8, 322</value>
+  </data>
+  <data name="flowpanelWort.Size" type="System.Drawing.Size, System.Drawing">
+    <value>760, 142</value>
+  </data>
+  <data name="flowpanelWort.TabIndex" type="System.Int32, mscorlib">
+    <value>12</value>
+  </data>
+  <data name="&gt;&gt;flowpanelWort.Name" xml:space="preserve">
+    <value>flowpanelWort</value>
+  </data>
+  <data name="&gt;&gt;flowpanelWort.Type" xml:space="preserve">
+    <value>System.Windows.Forms.FlowLayoutPanel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;flowpanelWort.Parent" xml:space="preserve">
+    <value>tabWuerfeln</value>
+  </data>
+  <data name="&gt;&gt;flowpanelWort.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="flowpanelTheKat.AutoScroll" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="flowpanelTheKat.Location" type="System.Drawing.Point, System.Drawing">
+    <value>8, 38</value>
+  </data>
+  <data name="flowpanelTheKat.Size" type="System.Drawing.Size, System.Drawing">
+    <value>760, 278</value>
+  </data>
+  <data name="flowpanelTheKat.TabIndex" type="System.Int32, mscorlib">
+    <value>11</value>
+  </data>
+  <data name="&gt;&gt;flowpanelTheKat.Name" xml:space="preserve">
+    <value>flowpanelTheKat</value>
+  </data>
+  <data name="&gt;&gt;flowpanelTheKat.Type" xml:space="preserve">
+    <value>System.Windows.Forms.FlowLayoutPanel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;flowpanelTheKat.Parent" xml:space="preserve">
+    <value>tabWuerfeln</value>
+  </data>
+  <data name="&gt;&gt;flowpanelTheKat.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="labelWortanzahl.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="labelWortanzahl.Location" type="System.Drawing.Point, System.Drawing">
+    <value>8, 15</value>
+  </data>
+  <data name="labelWortanzahl.Size" type="System.Drawing.Size, System.Drawing">
+    <value>61, 13</value>
+  </data>
+  <data name="labelWortanzahl.TabIndex" type="System.Int32, mscorlib">
+    <value>7</value>
+  </data>
+  <data name="labelWortanzahl.Text" xml:space="preserve">
+    <value>Wortanzahl</value>
+  </data>
+  <data name="&gt;&gt;labelWortanzahl.Name" xml:space="preserve">
+    <value>labelWortanzahl</value>
+  </data>
+  <data name="&gt;&gt;labelWortanzahl.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;labelWortanzahl.Parent" xml:space="preserve">
+    <value>tabWuerfeln</value>
+  </data>
+  <data name="&gt;&gt;labelWortanzahl.ZOrder" xml:space="preserve">
+    <value>6</value>
+  </data>
+  <data name="button1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>151, 9</value>
+  </data>
+  <data name="button1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>75, 23</value>
+  </data>
+  <data name="button1.TabIndex" type="System.Int32, mscorlib">
+    <value>6</value>
+  </data>
+  <data name="button1.Text" xml:space="preserve">
+    <value>Würfeln</value>
+  </data>
+  <data name="&gt;&gt;button1.Name" xml:space="preserve">
+    <value>button1</value>
+  </data>
+  <data name="&gt;&gt;button1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;button1.Parent" xml:space="preserve">
+    <value>tabWuerfeln</value>
+  </data>
+  <data name="&gt;&gt;button1.ZOrder" xml:space="preserve">
+    <value>7</value>
+  </data>
+  <data name="tabWuerfeln.Location" type="System.Drawing.Point, System.Drawing">
+    <value>4, 22</value>
+  </data>
+  <data name="tabWuerfeln.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 3, 3, 3</value>
+  </data>
+  <data name="tabWuerfeln.Size" type="System.Drawing.Size, System.Drawing">
+    <value>776, 508</value>
+  </data>
+  <data name="tabWuerfeln.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="tabWuerfeln.Text" xml:space="preserve">
+    <value>Würfeln</value>
+  </data>
+  <data name="&gt;&gt;tabWuerfeln.Name" xml:space="preserve">
+    <value>tabWuerfeln</value>
+  </data>
+  <data name="&gt;&gt;tabWuerfeln.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TabPage, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;tabWuerfeln.Parent" xml:space="preserve">
+    <value>tabControl</value>
+  </data>
+  <data name="&gt;&gt;tabWuerfeln.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="tabWort.BackgroundImageLayout" type="System.Windows.Forms.ImageLayout, System.Windows.Forms">
+    <value>None</value>
+  </data>
+  <data name="&gt;&gt;listWort.Name" xml:space="preserve">
+    <value>listWort</value>
+  </data>
+  <data name="&gt;&gt;listWort.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ListView, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;listWort.Parent" xml:space="preserve">
+    <value>tabWort</value>
+  </data>
+  <data name="&gt;&gt;listWort.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;listKategorie.Name" xml:space="preserve">
+    <value>listKategorie</value>
+  </data>
+  <data name="&gt;&gt;listKategorie.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ListView, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;listKategorie.Parent" xml:space="preserve">
+    <value>tabWort</value>
+  </data>
+  <data name="&gt;&gt;listKategorie.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;listThema.Name" xml:space="preserve">
+    <value>listThema</value>
+  </data>
+  <data name="&gt;&gt;listThema.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ListView, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;listThema.Parent" xml:space="preserve">
+    <value>tabWort</value>
+  </data>
+  <data name="&gt;&gt;listThema.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="tabWort.Location" type="System.Drawing.Point, System.Drawing">
+    <value>4, 22</value>
+  </data>
+  <data name="tabWort.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 3, 3, 3</value>
+  </data>
+  <data name="tabWort.Size" type="System.Drawing.Size, System.Drawing">
+    <value>776, 508</value>
+  </data>
+  <data name="tabWort.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="tabWort.Text" xml:space="preserve">
+    <value>Wörter</value>
+  </data>
+  <data name="&gt;&gt;tabWort.Name" xml:space="preserve">
+    <value>tabWort</value>
+  </data>
+  <data name="&gt;&gt;tabWort.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TabPage, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;tabWort.Parent" xml:space="preserve">
+    <value>tabControl</value>
+  </data>
+  <data name="&gt;&gt;tabWort.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="tabFavo.BackgroundImageLayout" type="System.Windows.Forms.ImageLayout, System.Windows.Forms">
+    <value>None</value>
+  </data>
+  <data name="&gt;&gt;button3.Name" xml:space="preserve">
+    <value>button3</value>
+  </data>
+  <data name="&gt;&gt;button3.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;button3.Parent" xml:space="preserve">
+    <value>tabFavo</value>
+  </data>
+  <data name="&gt;&gt;button3.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="tabFavo.Location" type="System.Drawing.Point, System.Drawing">
+    <value>4, 22</value>
+  </data>
+  <data name="tabFavo.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 3, 3, 3</value>
+  </data>
+  <data name="tabFavo.Size" type="System.Drawing.Size, System.Drawing">
+    <value>776, 508</value>
+  </data>
+  <data name="tabFavo.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="tabFavo.Text" xml:space="preserve">
+    <value>Favoriten</value>
+  </data>
+  <data name="&gt;&gt;tabFavo.Name" xml:space="preserve">
+    <value>tabFavo</value>
+  </data>
+  <data name="&gt;&gt;tabFavo.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TabPage, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;tabFavo.Parent" xml:space="preserve">
+    <value>tabControl</value>
+  </data>
+  <data name="&gt;&gt;tabFavo.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="tabListen.BackgroundImageLayout" type="System.Windows.Forms.ImageLayout, System.Windows.Forms">
+    <value>None</value>
+  </data>
+  <data name="&gt;&gt;button4.Name" xml:space="preserve">
+    <value>button4</value>
+  </data>
+  <data name="&gt;&gt;button4.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;button4.Parent" xml:space="preserve">
+    <value>tabListen</value>
+  </data>
+  <data name="&gt;&gt;button4.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="tabListen.Location" type="System.Drawing.Point, System.Drawing">
+    <value>4, 22</value>
+  </data>
+  <data name="tabListen.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 3, 3, 3</value>
+  </data>
+  <data name="tabListen.Size" type="System.Drawing.Size, System.Drawing">
+    <value>776, 508</value>
+  </data>
+  <data name="tabListen.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="tabListen.Text" xml:space="preserve">
+    <value>Listen</value>
+  </data>
+  <data name="&gt;&gt;tabListen.Name" xml:space="preserve">
+    <value>tabListen</value>
+  </data>
+  <data name="&gt;&gt;tabListen.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TabPage, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;tabListen.Parent" xml:space="preserve">
+    <value>tabControl</value>
+  </data>
+  <data name="&gt;&gt;tabListen.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="tabControl.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 27</value>
+  </data>
+  <data name="tabControl.Size" type="System.Drawing.Size, System.Drawing">
+    <value>784, 534</value>
+  </data>
+  <data name="tabControl.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;tabControl.Name" xml:space="preserve">
+    <value>tabControl</value>
+  </data>
+  <data name="&gt;&gt;tabControl.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TabControl, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;tabControl.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;tabControl.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="listWort.Location" type="System.Drawing.Point, System.Drawing">
+    <value>533, 16</value>
+  </data>
+  <data name="listWort.Size" type="System.Drawing.Size, System.Drawing">
+    <value>214, 444</value>
+  </data>
+  <data name="listWort.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;listWort.Name" xml:space="preserve">
+    <value>listWort</value>
+  </data>
+  <data name="&gt;&gt;listWort.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ListView, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;listWort.Parent" xml:space="preserve">
+    <value>tabWort</value>
+  </data>
+  <data name="&gt;&gt;listWort.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="columnWID.Text" xml:space="preserve">
+    <value>ID</value>
+  </data>
+  <data name="columnWID.Width" type="System.Int32, mscorlib">
+    <value>30</value>
+  </data>
+  <data name="columnWBEZ.Text" xml:space="preserve">
+    <value>Wort</value>
+  </data>
+  <data name="columnWBEZ.Width" type="System.Int32, mscorlib">
+    <value>183</value>
+  </data>
+  <data name="listKategorie.Location" type="System.Drawing.Point, System.Drawing">
+    <value>283, 16</value>
+  </data>
+  <data name="listKategorie.Size" type="System.Drawing.Size, System.Drawing">
+    <value>214, 444</value>
+  </data>
+  <data name="listKategorie.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;listKategorie.Name" xml:space="preserve">
+    <value>listKategorie</value>
+  </data>
+  <data name="&gt;&gt;listKategorie.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ListView, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;listKategorie.Parent" xml:space="preserve">
+    <value>tabWort</value>
+  </data>
+  <data name="&gt;&gt;listKategorie.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="columnKID.Text" xml:space="preserve">
+    <value>ID</value>
+  </data>
+  <data name="columnKID.Width" type="System.Int32, mscorlib">
+    <value>30</value>
+  </data>
+  <data name="columnKBEZ.Text" xml:space="preserve">
+    <value>Kategorie</value>
+  </data>
+  <data name="columnKBEZ.Width" type="System.Int32, mscorlib">
+    <value>183</value>
+  </data>
+  <data name="listThema.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>Off</value>
+  </data>
+  <data name="listThema.Location" type="System.Drawing.Point, System.Drawing">
+    <value>33, 16</value>
+  </data>
+  <data name="listThema.Size" type="System.Drawing.Size, System.Drawing">
+    <value>214, 444</value>
+  </data>
+  <data name="listThema.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;listThema.Name" xml:space="preserve">
+    <value>listThema</value>
+  </data>
+  <data name="&gt;&gt;listThema.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ListView, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;listThema.Parent" xml:space="preserve">
+    <value>tabWort</value>
+  </data>
+  <data name="&gt;&gt;listThema.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="columnTID.Text" xml:space="preserve">
+    <value>ID</value>
+  </data>
+  <data name="columnTID.Width" type="System.Int32, mscorlib">
+    <value>30</value>
+  </data>
+  <data name="columnTBEZ.Text" xml:space="preserve">
+    <value>Thema</value>
+  </data>
+  <data name="columnTBEZ.Width" type="System.Int32, mscorlib">
+    <value>183</value>
+  </data>
+  <data name="button3.Location" type="System.Drawing.Point, System.Drawing">
+    <value>351, 243</value>
+  </data>
+  <data name="button3.Size" type="System.Drawing.Size, System.Drawing">
+    <value>75, 23</value>
+  </data>
+  <data name="button3.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="button3.Text" xml:space="preserve">
+    <value>Favoriten</value>
+  </data>
+  <data name="&gt;&gt;button3.Name" xml:space="preserve">
+    <value>button3</value>
+  </data>
+  <data name="&gt;&gt;button3.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;button3.Parent" xml:space="preserve">
+    <value>tabFavo</value>
+  </data>
+  <data name="&gt;&gt;button3.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="button4.Location" type="System.Drawing.Point, System.Drawing">
+    <value>351, 243</value>
+  </data>
+  <data name="button4.Size" type="System.Drawing.Size, System.Drawing">
+    <value>75, 23</value>
+  </data>
+  <data name="button4.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="button4.Text" xml:space="preserve">
+    <value>Listen</value>
+  </data>
+  <data name="&gt;&gt;button4.Name" xml:space="preserve">
+    <value>button4</value>
+  </data>
+  <data name="&gt;&gt;button4.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;button4.Parent" xml:space="preserve">
+    <value>tabListen</value>
+  </data>
+  <data name="&gt;&gt;button4.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="$this.TrayHeight" type="System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>28</value>
+  </metadata>
+  <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
+    <value>6, 13</value>
+  </data>
+  <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
+    <value>784, 562</value>
+  </data>
+  <data name="$this.Text" xml:space="preserve">
+    <value>CreaWord</value>
+  </data>
+  <data name="&gt;&gt;menuDatei.Name" xml:space="preserve">
+    <value>menuDatei</value>
+  </data>
+  <data name="&gt;&gt;menuDatei.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;menuitemDateiNeu.Name" xml:space="preserve">
+    <value>menuitemDateiNeu</value>
+  </data>
+  <data name="&gt;&gt;menuitemDateiNeu.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;menuitemNeuWuerfeln.Name" xml:space="preserve">
+    <value>menuitemNeuWuerfeln</value>
+  </data>
+  <data name="&gt;&gt;menuitemNeuWuerfeln.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;menuitemNeuListen.Name" xml:space="preserve">
+    <value>menuitemNeuListen</value>
+  </data>
+  <data name="&gt;&gt;menuitemNeuListen.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;toolStripMenuItem1.Name" xml:space="preserve">
+    <value>toolStripMenuItem1</value>
+  </data>
+  <data name="&gt;&gt;toolStripMenuItem1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripSeparator, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;menuitemSateiSpeichern.Name" xml:space="preserve">
+    <value>menuitemSateiSpeichern</value>
+  </data>
+  <data name="&gt;&gt;menuitemSateiSpeichern.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;menuitemDateiExport.Name" xml:space="preserve">
+    <value>menuitemDateiExport</value>
+  </data>
+  <data name="&gt;&gt;menuitemDateiExport.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;toolStripMenuItem2.Name" xml:space="preserve">
+    <value>toolStripMenuItem2</value>
+  </data>
+  <data name="&gt;&gt;toolStripMenuItem2.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripSeparator, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;menuitemDateiDruck.Name" xml:space="preserve">
+    <value>menuitemDateiDruck</value>
+  </data>
+  <data name="&gt;&gt;menuitemDateiDruck.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;toolStripMenuItem3.Name" xml:space="preserve">
+    <value>toolStripMenuItem3</value>
+  </data>
+  <data name="&gt;&gt;toolStripMenuItem3.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripSeparator, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;menuitemDateiBeenden.Name" xml:space="preserve">
+    <value>menuitemDateiBeenden</value>
+  </data>
+  <data name="&gt;&gt;menuitemDateiBeenden.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;menuBearbeiten.Name" xml:space="preserve">
+    <value>menuBearbeiten</value>
+  </data>
+  <data name="&gt;&gt;menuBearbeiten.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;menuitemBeaWort.Name" xml:space="preserve">
+    <value>menuitemBeaWort</value>
+  </data>
+  <data name="&gt;&gt;menuitemBeaWort.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;menuitemBeaFavo.Name" xml:space="preserve">
+    <value>menuitemBeaFavo</value>
+  </data>
+  <data name="&gt;&gt;menuitemBeaFavo.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;menuitemBeaListen.Name" xml:space="preserve">
+    <value>menuitemBeaListen</value>
+  </data>
+  <data name="&gt;&gt;menuitemBeaListen.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;menuEinstellungen.Name" xml:space="preserve">
+    <value>menuEinstellungen</value>
+  </data>
+  <data name="&gt;&gt;menuEinstellungen.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;menuitemEinstOption.Name" xml:space="preserve">
+    <value>menuitemEinstOption</value>
+  </data>
+  <data name="&gt;&gt;menuitemEinstOption.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;spracheToolStripMenuItem.Name" xml:space="preserve">
+    <value>spracheToolStripMenuItem</value>
+  </data>
+  <data name="&gt;&gt;spracheToolStripMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;menuitemEinstDesign.Name" xml:space="preserve">
+    <value>menuitemEinstDesign</value>
+  </data>
+  <data name="&gt;&gt;menuitemEinstDesign.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;toolStripMenuItem4.Name" xml:space="preserve">
+    <value>toolStripMenuItem4</value>
+  </data>
+  <data name="&gt;&gt;toolStripMenuItem4.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripSeparator, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;menuitemEinstWerk.Name" xml:space="preserve">
+    <value>menuitemEinstWerk</value>
+  </data>
+  <data name="&gt;&gt;menuitemEinstWerk.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;menuHilfe.Name" xml:space="preserve">
+    <value>menuHilfe</value>
+  </data>
+  <data name="&gt;&gt;menuHilfe.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;menuitemHilfeTut.Name" xml:space="preserve">
+    <value>menuitemHilfeTut</value>
+  </data>
+  <data name="&gt;&gt;menuitemHilfeTut.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;menuitemHilfeDoku.Name" xml:space="preserve">
+    <value>menuitemHilfeDoku</value>
+  </data>
+  <data name="&gt;&gt;menuitemHilfeDoku.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;menuitemHilfeFAQ.Name" xml:space="preserve">
+    <value>menuitemHilfeFAQ</value>
+  </data>
+  <data name="&gt;&gt;menuitemHilfeFAQ.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;menuInfo.Name" xml:space="preserve">
+    <value>menuInfo</value>
+  </data>
+  <data name="&gt;&gt;menuInfo.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;menuitemInfoDev.Name" xml:space="preserve">
+    <value>menuitemInfoDev</value>
+  </data>
+  <data name="&gt;&gt;menuitemInfoDev.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;menuitemInfoCrea.Name" xml:space="preserve">
+    <value>menuitemInfoCrea</value>
+  </data>
+  <data name="&gt;&gt;menuitemInfoCrea.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;menuitemInfoFeedb.Name" xml:space="preserve">
+    <value>menuitemInfoFeedb</value>
+  </data>
+  <data name="&gt;&gt;menuitemInfoFeedb.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;menuitemInfoHash.Name" xml:space="preserve">
+    <value>menuitemInfoHash</value>
+  </data>
+  <data name="&gt;&gt;menuitemInfoHash.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;menuitemInfoVers.Name" xml:space="preserve">
+    <value>menuitemInfoVers</value>
+  </data>
+  <data name="&gt;&gt;menuitemInfoVers.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;menuitemInfoAGB.Name" xml:space="preserve">
+    <value>menuitemInfoAGB</value>
+  </data>
+  <data name="&gt;&gt;menuitemInfoAGB.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;backgroundWorker1.Name" xml:space="preserve">
+    <value>backgroundWorker1</value>
+  </data>
+  <data name="&gt;&gt;backgroundWorker1.Type" xml:space="preserve">
+    <value>System.ComponentModel.BackgroundWorker, System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;columnWID.Name" xml:space="preserve">
+    <value>columnWID</value>
+  </data>
+  <data name="&gt;&gt;columnWID.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ColumnHeader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;columnWBEZ.Name" xml:space="preserve">
+    <value>columnWBEZ</value>
+  </data>
+  <data name="&gt;&gt;columnWBEZ.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ColumnHeader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;columnKID.Name" xml:space="preserve">
+    <value>columnKID</value>
+  </data>
+  <data name="&gt;&gt;columnKID.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ColumnHeader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;columnKBEZ.Name" xml:space="preserve">
+    <value>columnKBEZ</value>
+  </data>
+  <data name="&gt;&gt;columnKBEZ.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ColumnHeader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;columnTID.Name" xml:space="preserve">
+    <value>columnTID</value>
+  </data>
+  <data name="&gt;&gt;columnTID.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ColumnHeader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;columnTBEZ.Name" xml:space="preserve">
+    <value>columnTBEZ</value>
+  </data>
+  <data name="&gt;&gt;columnTBEZ.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ColumnHeader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;$this.Name" xml:space="preserve">
+    <value>MainForm</value>
+  </data>
+  <data name="&gt;&gt;$this.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Form, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+</root>
