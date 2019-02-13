@@ -113,7 +113,7 @@ namespace CreaWordv4
             flowpanelOptButtons.Controls.Clear();
             flowpanelTheKat.Controls.Clear();
             flowpanelWort.Controls.Clear();
-            cbWortanzahl.SelectedIndex = 0; //Selektion leeren
+            cbWortanzahl.SelectedIndex = 0;
         }
 
         private void tabWort_Layout(object sender, LayoutEventArgs e)

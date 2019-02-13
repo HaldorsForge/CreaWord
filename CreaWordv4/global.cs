@@ -8,7 +8,7 @@ namespace CreaWordv4
 {
     class global
     {
-        int save;
+        bool save = true;  //globale Variable zum abgleichen des Seichern-Status
         int intGlobal;
         string stringGlobal;
     }

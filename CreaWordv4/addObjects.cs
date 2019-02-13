@@ -7,15 +7,21 @@ using System.Windows.Forms;
 
 namespace CreaWordv4
 {
-    class addObjects
+    class addObjects    //Klasse zum erzeugen Objekten wärend der Laufzeit, wird für den "Würfeln"-Tab benötigt
     {
-        public void wuerfelnSet(int anzahl, FlowLayoutPanel panel)  //TODO + add panel!!!!!!
+        //Die Methode wuerfelnSet() erzeugt unteranderem Comboboxen, die die Themen und deren Kategorien aus der DB auflisten damit der User den Wörterpool festlegen kann
+        //wuerfelnSet() benötigt die Anzahl der zu würfelnden Wörter und das FlowLayoutPanel, in das die Objekte geladen werden sollen
+        public void wuerfelnSet(int anzahl, FlowLayoutPanel panel)  //TODO mit DB-Daten füllen
         {
+            //das zugewiesene FlowLayoutPanel wird vorab erstmal gecleart
             panel.Controls.Clear();
 
+            //die Menge der Objektpackete richtet sich nach der gewünschten Wortanzahl
+            //jedes Packet besteht aus 1 Textbox, 1 Comboboxen pro Thema und Kategorie und einem FlowLayoutPanel, das diese beinhaltet
             for(int i = 1; i <= anzahl; i++)
             {
-                ComboBox thema = new ComboBox();
+                //Thema
+                ComboBox thema = new ComboBox();    //TODO mit DB-Daten füllen
                 thema.Name = "cbThema" + i;
                 thema.DropDownStyle = ComboBoxStyle.DropDownList;
 
@@ -25,17 +31,18 @@ namespace CreaWordv4
                 themaNum.Text = i + ". Thema";
                 themaNum.TextAlign = HorizontalAlignment.Center;
 
-
+                //Kategorie
                 TextBox katNum = new TextBox();
                 katNum.Name = "txtboxKatNum" + i;
                 katNum.Width = thema.Width;
                 katNum.Text = i + ". Kategorie";
                 katNum.TextAlign = HorizontalAlignment.Center;
 
-                ComboBox kategorie = new ComboBox();
+                ComboBox kategorie = new ComboBox();    //TODO mit DB-Daten füllen
                 kategorie.Name = "cbKat" + i;
                 kategorie.DropDownStyle = ComboBoxStyle.DropDownList;
 
+                //beinhaltet Thema und Kategorie
                 FlowLayoutPanel flow = new FlowLayoutPanel();
                 flow.FlowDirection = FlowDirection.TopDown;
                 flow.Name = "flowpanelThema" + i;
@@ -45,10 +52,13 @@ namespace CreaWordv4
                 flow.Controls.Add(thema);
                 flow.Controls.Add(katNum);
                 flow.Controls.Add(kategorie);
-
+                
                 panel.Controls.Add(flow);
             }
         }
+
+        //nach der Themen- und Kategorienauswahl wird wuerfelnWort() wird ein Packet aus 2 Textboxen und 1 FlowLayoutPanel pro Wort erzeugt
+        //die Textbox wortBez beinhaltet das gewürfelte Wort
         public void wuerfelnWort(int anzahl, FlowLayoutPanel panel)
         {
             panel.Controls.Clear();
@@ -77,6 +87,9 @@ namespace CreaWordv4
                 panel.Controls.Add(flow);
             }
         }
+
+        //nach dem gewürfelt wurde stehen dem User einige Optionen für die Wortauswahl zur Verfügung
+        //aktuell "als Favorit speichern", "Export als Textdatei" oder "in Liste hinzufügen"
         public void wuerfelnOpts(FlowLayoutPanel panel)
         {
             panel.Controls.Clear();
