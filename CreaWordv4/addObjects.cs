@@ -69,6 +69,7 @@ namespace CreaWordv4
                 wortBez.Name = "txtboxWortBez" + i;
                 wortBez.Text = "Wort " + i;  //gewürfeltes wort
                 wortBez.TextAlign = HorizontalAlignment.Center;
+                wortBez.Width = 121;
 
                 TextBox wortNummer = new TextBox();
                 wortNummer.Name = "txtboxWortNum" + i;
@@ -97,18 +98,18 @@ namespace CreaWordv4
             Button favo = new Button();
             favo.Name = "btnFavo";
             favo.Text = "als Favorit speichern";
-            favo.Width = 200;
+            favo.Width = 150;
             
 
             Button txt = new Button();
             txt.Name = "btnTXT";
             txt.Text = "Export als Textdatei";
-            txt.Width = 200;
+            txt.Width = 130;
 
             Button liste = new Button();
             liste.Name = "btnListe";
             liste.Text = "in Liste hinzufügen";
-            liste.Width = 200;
+            liste.Width = 130;
 
             panel.Controls.Add(favo);
             panel.Controls.Add(txt);

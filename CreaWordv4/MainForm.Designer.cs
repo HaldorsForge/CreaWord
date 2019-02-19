@@ -62,6 +62,8 @@
             this.menuitemInfoHash = new System.Windows.Forms.ToolStripMenuItem();
             this.menuitemInfoVers = new System.Windows.Forms.ToolStripMenuItem();
             this.menuitemInfoAGB = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripTextBoxUhr = new System.Windows.Forms.ToolStripTextBox();
+            this.toolStripTextBoxDatum = new System.Windows.Forms.ToolStripTextBox();
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             this.tabControl = new System.Windows.Forms.TabControl();
             this.tabWuerfeln = new System.Windows.Forms.TabPage();
@@ -74,6 +76,15 @@
             this.labelWortanzahl = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
             this.tabWort = new System.Windows.Forms.TabPage();
+            this.button9 = new System.Windows.Forms.Button();
+            this.button8 = new System.Windows.Forms.Button();
+            this.button7 = new System.Windows.Forms.Button();
+            this.button6 = new System.Windows.Forms.Button();
+            this.button5 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
+            this.btnWortAendern = new System.Windows.Forms.Button();
+            this.btnKategorieAendern = new System.Windows.Forms.Button();
+            this.btnThemaAendern = new System.Windows.Forms.Button();
             this.listWort = new System.Windows.Forms.ListView();
             this.columnWID = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnWBEZ = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
@@ -84,9 +95,41 @@
             this.columnTID = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnTBEZ = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.tabFavo = new System.Windows.Forms.TabPage();
-            this.button3 = new System.Windows.Forms.Button();
+            this.lvFavorit = new System.Windows.Forms.ListView();
+            this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader4 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader5 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader6 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader7 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader8 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader9 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader10 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.button10 = new System.Windows.Forms.Button();
+            this.button11 = new System.Windows.Forms.Button();
+            this.button12 = new System.Windows.Forms.Button();
             this.tabListen = new System.Windows.Forms.TabPage();
+            this.button14 = new System.Windows.Forms.Button();
+            this.button15 = new System.Windows.Forms.Button();
+            this.button16 = new System.Windows.Forms.Button();
+            this.button3 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
+            this.button13 = new System.Windows.Forms.Button();
+            this.listView2 = new System.Windows.Forms.ListView();
+            this.columnHeader13 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader14 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader15 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader16 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader17 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader18 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader19 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader20 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader21 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader22 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.listView1 = new System.Windows.Forms.ListView();
+            this.columnHeader11 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader12 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.menuStrip.SuspendLayout();
             this.tabControl.SuspendLayout();
             this.tabWuerfeln.SuspendLayout();
@@ -102,9 +145,12 @@
             this.menuBearbeiten,
             this.menuEinstellungen,
             this.menuHilfe,
-            this.menuInfo});
+            this.menuInfo,
+            this.toolStripTextBoxUhr,
+            this.toolStripTextBoxDatum});
             resources.ApplyResources(this.menuStrip, "menuStrip");
             this.menuStrip.Name = "menuStrip";
+            this.menuStrip.Layout += new System.Windows.Forms.LayoutEventHandler(this.menuStrip_Layout);
             // 
             // menuDatei
             // 
@@ -192,11 +238,13 @@
             // 
             this.menuitemBeaFavo.Name = "menuitemBeaFavo";
             resources.ApplyResources(this.menuitemBeaFavo, "menuitemBeaFavo");
+            this.menuitemBeaFavo.Click += new System.EventHandler(this.menuitemBeaFavo_Click);
             // 
             // menuitemBeaListen
             // 
             this.menuitemBeaListen.Name = "menuitemBeaListen";
             resources.ApplyResources(this.menuitemBeaListen, "menuitemBeaListen");
+            this.menuitemBeaListen.Click += new System.EventHandler(this.menuitemBeaListen_Click);
             // 
             // menuEinstellungen
             // 
@@ -301,6 +349,20 @@
             this.menuitemInfoAGB.Name = "menuitemInfoAGB";
             resources.ApplyResources(this.menuitemInfoAGB, "menuitemInfoAGB");
             // 
+            // toolStripTextBoxUhr
+            // 
+            this.toolStripTextBoxUhr.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
+            resources.ApplyResources(this.toolStripTextBoxUhr, "toolStripTextBoxUhr");
+            this.toolStripTextBoxUhr.Name = "toolStripTextBoxUhr";
+            this.toolStripTextBoxUhr.ReadOnly = true;
+            // 
+            // toolStripTextBoxDatum
+            // 
+            this.toolStripTextBoxDatum.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
+            resources.ApplyResources(this.toolStripTextBoxDatum, "toolStripTextBoxDatum");
+            this.toolStripTextBoxDatum.Name = "toolStripTextBoxDatum";
+            this.toolStripTextBoxDatum.ReadOnly = true;
+            // 
             // tabControl
             // 
             this.tabControl.Controls.Add(this.tabWuerfeln);
@@ -351,8 +413,7 @@
             resources.GetString("cbWortanzahl.Items5"),
             resources.GetString("cbWortanzahl.Items6"),
             resources.GetString("cbWortanzahl.Items7"),
-            resources.GetString("cbWortanzahl.Items8"),
-            resources.GetString("cbWortanzahl.Items9")});
+            resources.GetString("cbWortanzahl.Items8")});
             resources.ApplyResources(this.cbWortanzahl, "cbWortanzahl");
             this.cbWortanzahl.Name = "cbWortanzahl";
             this.cbWortanzahl.SelectedIndexChanged += new System.EventHandler(this.cbWortanzahl_SelectedIndexChanged);
@@ -387,6 +448,15 @@
             // tabWort
             // 
             resources.ApplyResources(this.tabWort, "tabWort");
+            this.tabWort.Controls.Add(this.button9);
+            this.tabWort.Controls.Add(this.button8);
+            this.tabWort.Controls.Add(this.button7);
+            this.tabWort.Controls.Add(this.button6);
+            this.tabWort.Controls.Add(this.button5);
+            this.tabWort.Controls.Add(this.button2);
+            this.tabWort.Controls.Add(this.btnWortAendern);
+            this.tabWort.Controls.Add(this.btnKategorieAendern);
+            this.tabWort.Controls.Add(this.btnThemaAendern);
             this.tabWort.Controls.Add(this.listWort);
             this.tabWort.Controls.Add(this.listKategorie);
             this.tabWort.Controls.Add(this.listThema);
@@ -394,6 +464,60 @@
             this.tabWort.UseVisualStyleBackColor = true;
             this.tabWort.Enter += new System.EventHandler(this.tabWort_Enter);
             this.tabWort.Layout += new System.Windows.Forms.LayoutEventHandler(this.tabWort_Layout);
+            // 
+            // button9
+            // 
+            resources.ApplyResources(this.button9, "button9");
+            this.button9.Name = "button9";
+            this.button9.UseVisualStyleBackColor = true;
+            // 
+            // button8
+            // 
+            resources.ApplyResources(this.button8, "button8");
+            this.button8.Name = "button8";
+            this.button8.UseVisualStyleBackColor = true;
+            // 
+            // button7
+            // 
+            resources.ApplyResources(this.button7, "button7");
+            this.button7.Name = "button7";
+            this.button7.UseVisualStyleBackColor = true;
+            // 
+            // button6
+            // 
+            resources.ApplyResources(this.button6, "button6");
+            this.button6.Name = "button6";
+            this.button6.UseVisualStyleBackColor = true;
+            // 
+            // button5
+            // 
+            resources.ApplyResources(this.button5, "button5");
+            this.button5.Name = "button5";
+            this.button5.UseVisualStyleBackColor = true;
+            // 
+            // button2
+            // 
+            resources.ApplyResources(this.button2, "button2");
+            this.button2.Name = "button2";
+            this.button2.UseVisualStyleBackColor = true;
+            // 
+            // btnWortAendern
+            // 
+            resources.ApplyResources(this.btnWortAendern, "btnWortAendern");
+            this.btnWortAendern.Name = "btnWortAendern";
+            this.btnWortAendern.UseVisualStyleBackColor = true;
+            // 
+            // btnKategorieAendern
+            // 
+            resources.ApplyResources(this.btnKategorieAendern, "btnKategorieAendern");
+            this.btnKategorieAendern.Name = "btnKategorieAendern";
+            this.btnKategorieAendern.UseVisualStyleBackColor = true;
+            // 
+            // btnThemaAendern
+            // 
+            resources.ApplyResources(this.btnThemaAendern, "btnThemaAendern");
+            this.btnThemaAendern.Name = "btnThemaAendern";
+            this.btnThemaAendern.UseVisualStyleBackColor = true;
             // 
             // listWort
             // 
@@ -451,7 +575,6 @@
             this.listThema.UseCompatibleStateImageBehavior = false;
             this.listThema.View = System.Windows.Forms.View.Details;
             this.listThema.ColumnWidthChanging += new System.Windows.Forms.ColumnWidthChangingEventHandler(this.listThema_ColumnWidthChanging);
-            this.listThema.ItemActivate += new System.EventHandler(this.listThema_ItemActivate);
             this.listThema.SelectedIndexChanged += new System.EventHandler(this.listThema_SelectedIndexChanged);
             // 
             // columnTID
@@ -465,10 +588,125 @@
             // tabFavo
             // 
             resources.ApplyResources(this.tabFavo, "tabFavo");
-            this.tabFavo.Controls.Add(this.button3);
+            this.tabFavo.Controls.Add(this.lvFavorit);
+            this.tabFavo.Controls.Add(this.button10);
+            this.tabFavo.Controls.Add(this.button11);
+            this.tabFavo.Controls.Add(this.button12);
             this.tabFavo.Name = "tabFavo";
             this.tabFavo.UseVisualStyleBackColor = true;
             this.tabFavo.Layout += new System.Windows.Forms.LayoutEventHandler(this.tabFavo_Layout);
+            // 
+            // lvFavorit
+            // 
+            this.lvFavorit.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.columnHeader1,
+            this.columnHeader2,
+            this.columnHeader3,
+            this.columnHeader4,
+            this.columnHeader5,
+            this.columnHeader6,
+            this.columnHeader7,
+            this.columnHeader8,
+            this.columnHeader9,
+            this.columnHeader10});
+            this.lvFavorit.FullRowSelect = true;
+            this.lvFavorit.GridLines = true;
+            resources.ApplyResources(this.lvFavorit, "lvFavorit");
+            this.lvFavorit.Name = "lvFavorit";
+            this.lvFavorit.UseCompatibleStateImageBehavior = false;
+            this.lvFavorit.View = System.Windows.Forms.View.Details;
+            this.lvFavorit.ColumnWidthChanging += new System.Windows.Forms.ColumnWidthChangingEventHandler(this.listThema_ColumnWidthChanging);
+            // 
+            // columnHeader1
+            // 
+            resources.ApplyResources(this.columnHeader1, "columnHeader1");
+            // 
+            // columnHeader2
+            // 
+            resources.ApplyResources(this.columnHeader2, "columnHeader2");
+            // 
+            // columnHeader3
+            // 
+            resources.ApplyResources(this.columnHeader3, "columnHeader3");
+            // 
+            // columnHeader4
+            // 
+            resources.ApplyResources(this.columnHeader4, "columnHeader4");
+            // 
+            // columnHeader5
+            // 
+            resources.ApplyResources(this.columnHeader5, "columnHeader5");
+            // 
+            // columnHeader6
+            // 
+            resources.ApplyResources(this.columnHeader6, "columnHeader6");
+            // 
+            // columnHeader7
+            // 
+            resources.ApplyResources(this.columnHeader7, "columnHeader7");
+            // 
+            // columnHeader8
+            // 
+            resources.ApplyResources(this.columnHeader8, "columnHeader8");
+            // 
+            // columnHeader9
+            // 
+            resources.ApplyResources(this.columnHeader9, "columnHeader9");
+            // 
+            // columnHeader10
+            // 
+            resources.ApplyResources(this.columnHeader10, "columnHeader10");
+            // 
+            // button10
+            // 
+            resources.ApplyResources(this.button10, "button10");
+            this.button10.Name = "button10";
+            this.button10.UseVisualStyleBackColor = true;
+            // 
+            // button11
+            // 
+            resources.ApplyResources(this.button11, "button11");
+            this.button11.Name = "button11";
+            this.button11.UseVisualStyleBackColor = true;
+            // 
+            // button12
+            // 
+            resources.ApplyResources(this.button12, "button12");
+            this.button12.Name = "button12";
+            this.button12.UseVisualStyleBackColor = true;
+            // 
+            // tabListen
+            // 
+            resources.ApplyResources(this.tabListen, "tabListen");
+            this.tabListen.Controls.Add(this.button14);
+            this.tabListen.Controls.Add(this.button15);
+            this.tabListen.Controls.Add(this.button16);
+            this.tabListen.Controls.Add(this.button3);
+            this.tabListen.Controls.Add(this.button4);
+            this.tabListen.Controls.Add(this.button13);
+            this.tabListen.Controls.Add(this.listView2);
+            this.tabListen.Controls.Add(this.listView1);
+            this.tabListen.Name = "tabListen";
+            this.tabListen.UseVisualStyleBackColor = true;
+            this.tabListen.Layout += new System.Windows.Forms.LayoutEventHandler(this.tabListen_Layout);
+            // 
+            // button14
+            // 
+            resources.ApplyResources(this.button14, "button14");
+            this.button14.Name = "button14";
+            this.button14.UseVisualStyleBackColor = true;
+            // 
+            // button15
+            // 
+            resources.ApplyResources(this.button15, "button15");
+            this.button15.Name = "button15";
+            this.button15.UseVisualStyleBackColor = true;
+            // 
+            // button16
+            // 
+            resources.ApplyResources(this.button16, "button16");
+            this.button16.Name = "button16";
+            this.button16.UseVisualStyleBackColor = true;
             // 
             // button3
             // 
@@ -476,19 +714,99 @@
             this.button3.Name = "button3";
             this.button3.UseVisualStyleBackColor = true;
             // 
-            // tabListen
-            // 
-            resources.ApplyResources(this.tabListen, "tabListen");
-            this.tabListen.Controls.Add(this.button4);
-            this.tabListen.Name = "tabListen";
-            this.tabListen.UseVisualStyleBackColor = true;
-            this.tabListen.Layout += new System.Windows.Forms.LayoutEventHandler(this.tabListen_Layout);
-            // 
             // button4
             // 
             resources.ApplyResources(this.button4, "button4");
             this.button4.Name = "button4";
             this.button4.UseVisualStyleBackColor = true;
+            // 
+            // button13
+            // 
+            resources.ApplyResources(this.button13, "button13");
+            this.button13.Name = "button13";
+            this.button13.UseVisualStyleBackColor = true;
+            // 
+            // listView2
+            // 
+            this.listView2.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.columnHeader13,
+            this.columnHeader14,
+            this.columnHeader15,
+            this.columnHeader16,
+            this.columnHeader17,
+            this.columnHeader18,
+            this.columnHeader19,
+            this.columnHeader20,
+            this.columnHeader21,
+            this.columnHeader22});
+            this.listView2.FullRowSelect = true;
+            this.listView2.GridLines = true;
+            resources.ApplyResources(this.listView2, "listView2");
+            this.listView2.Name = "listView2";
+            this.listView2.UseCompatibleStateImageBehavior = false;
+            this.listView2.View = System.Windows.Forms.View.Details;
+            this.listView2.ColumnWidthChanging += new System.Windows.Forms.ColumnWidthChangingEventHandler(this.listThema_ColumnWidthChanging);
+            // 
+            // columnHeader13
+            // 
+            resources.ApplyResources(this.columnHeader13, "columnHeader13");
+            // 
+            // columnHeader14
+            // 
+            resources.ApplyResources(this.columnHeader14, "columnHeader14");
+            // 
+            // columnHeader15
+            // 
+            resources.ApplyResources(this.columnHeader15, "columnHeader15");
+            // 
+            // columnHeader16
+            // 
+            resources.ApplyResources(this.columnHeader16, "columnHeader16");
+            // 
+            // columnHeader17
+            // 
+            resources.ApplyResources(this.columnHeader17, "columnHeader17");
+            // 
+            // columnHeader18
+            // 
+            resources.ApplyResources(this.columnHeader18, "columnHeader18");
+            // 
+            // columnHeader19
+            // 
+            resources.ApplyResources(this.columnHeader19, "columnHeader19");
+            // 
+            // columnHeader20
+            // 
+            resources.ApplyResources(this.columnHeader20, "columnHeader20");
+            // 
+            // columnHeader21
+            // 
+            resources.ApplyResources(this.columnHeader21, "columnHeader21");
+            // 
+            // columnHeader22
+            // 
+            resources.ApplyResources(this.columnHeader22, "columnHeader22");
+            // 
+            // listView1
+            // 
+            this.listView1.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.columnHeader11,
+            this.columnHeader12});
+            this.listView1.FullRowSelect = true;
+            this.listView1.GridLines = true;
+            resources.ApplyResources(this.listView1, "listView1");
+            this.listView1.Name = "listView1";
+            this.listView1.UseCompatibleStateImageBehavior = false;
+            this.listView1.View = System.Windows.Forms.View.Details;
+            this.listView1.ColumnWidthChanging += new System.Windows.Forms.ColumnWidthChangingEventHandler(this.listThema_ColumnWidthChanging);
+            // 
+            // columnHeader11
+            // 
+            resources.ApplyResources(this.columnHeader11, "columnHeader11");
+            // 
+            // columnHeader12
+            // 
+            resources.ApplyResources(this.columnHeader12, "columnHeader12");
             // 
             // MainForm
             // 
@@ -557,8 +875,6 @@
         private System.Windows.Forms.ToolStripMenuItem menuitemInfoVers;
         private System.Windows.Forms.ToolStripMenuItem menuitemInfoAGB;
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Label labelWortanzahl;
         private System.Windows.Forms.FlowLayoutPanel flowpanelWort;
         private System.Windows.Forms.FlowLayoutPanel flowpanelTheKat;
@@ -575,6 +891,51 @@
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.ColumnHeader columnTID;
         private System.Windows.Forms.ColumnHeader columnTBEZ;
+        private System.Windows.Forms.ToolStripTextBox toolStripTextBoxDatum;
+        private System.Windows.Forms.ToolStripTextBox toolStripTextBoxUhr;
+        private System.Windows.Forms.Button button9;
+        private System.Windows.Forms.Button button8;
+        private System.Windows.Forms.Button button6;
+        private System.Windows.Forms.Button button5;
+        private System.Windows.Forms.Button btnWortAendern;
+        private System.Windows.Forms.Button btnKategorieAendern;
+        private System.Windows.Forms.Button button7;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button btnThemaAendern;
+        private System.Windows.Forms.ListView lvFavorit;
+        private System.Windows.Forms.ColumnHeader columnHeader1;
+        private System.Windows.Forms.ColumnHeader columnHeader2;
+        private System.Windows.Forms.ColumnHeader columnHeader3;
+        private System.Windows.Forms.ColumnHeader columnHeader4;
+        private System.Windows.Forms.ColumnHeader columnHeader5;
+        private System.Windows.Forms.ColumnHeader columnHeader6;
+        private System.Windows.Forms.ColumnHeader columnHeader7;
+        private System.Windows.Forms.ColumnHeader columnHeader8;
+        private System.Windows.Forms.ColumnHeader columnHeader9;
+        private System.Windows.Forms.ColumnHeader columnHeader10;
+        private System.Windows.Forms.Button button10;
+        private System.Windows.Forms.Button button11;
+        private System.Windows.Forms.Button button12;
+        private System.Windows.Forms.Button button14;
+        private System.Windows.Forms.Button button15;
+        private System.Windows.Forms.Button button16;
+        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Button button13;
+        private System.Windows.Forms.ListView listView2;
+        private System.Windows.Forms.ColumnHeader columnHeader13;
+        private System.Windows.Forms.ColumnHeader columnHeader14;
+        private System.Windows.Forms.ColumnHeader columnHeader15;
+        private System.Windows.Forms.ColumnHeader columnHeader16;
+        private System.Windows.Forms.ColumnHeader columnHeader17;
+        private System.Windows.Forms.ColumnHeader columnHeader18;
+        private System.Windows.Forms.ColumnHeader columnHeader19;
+        private System.Windows.Forms.ColumnHeader columnHeader20;
+        private System.Windows.Forms.ColumnHeader columnHeader21;
+        private System.Windows.Forms.ColumnHeader columnHeader22;
+        private System.Windows.Forms.ListView listView1;
+        private System.Windows.Forms.ColumnHeader columnHeader11;
+        private System.Windows.Forms.ColumnHeader columnHeader12;
     }
 }
 

@@ -65,7 +65,7 @@
   <ItemGroup>
     <Compile Include="addObjects.cs" />
     <Compile Include="BgImages.cs" />
-    <Compile Include="DBConn.cs" />
+    <Compile Include="DBLoad.cs" />
     <Compile Include="createTable.cs" />
     <Compile Include="createLists.cs" />
     <Compile Include="global.cs" />

@@ -8,7 +8,6 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SQLite;
-//using System.Data;
 using System.IO;
 
 namespace CreaWordv4
@@ -18,16 +17,13 @@ namespace CreaWordv4
         public MainForm()
         {
             InitializeComponent();
-            
         }
-        createTable tables = new createTable();
 
-        DataSet datasetThema = new DataSet();
-        DataSet datasetKategorie = new DataSet();
-        DataSet datasetWort = new DataSet();
+        createTable tables;
+        //DBLoad dbLoad;
+        //global global;
 
-        
-
+        Timer t = new Timer();
 
         private void MainForm_Load(object sender, EventArgs e)
         {
@@ -36,12 +32,15 @@ namespace CreaWordv4
             tables.Wort();
             tables.Favorit();
             tables.Liste();
-            
 
+            
+           
         }
 
         private void tabWuerfeln_Layout(object sender, LayoutEventArgs e)
         {
+            DBLoad dbLoad = new DBLoad();
+            dbLoad.Load();  //Einlesen der DB-Inhalte in die Datasets
             DateTime d = DateTime.Now; // frühling(3-5), sommer(6-8), herbst(9-11), winter(12-2)
             int month = d.Month;
             if (month >= 3 && month <= 5)
@@ -81,30 +80,9 @@ namespace CreaWordv4
 
         private void cbWortanzahl_SelectedIndexChanged(object sender, EventArgs e)
         {
-            int anzahl = new int();
-            anzahl = int.Parse(cbWortanzahl.Text);
-            addObjects add = new addObjects();
-            add.wuerfelnSet(anzahl, flowpanelTheKat);
-
-            //connection.ConnectionString = "Data Source = " + /*dir + */dbfilename;
-            //connection.Open();
-
-            ////--------------Einlesen der Themen aus der DB
-            //listThema.Items.Clear();
-
-            ////DataSet datasetThema = new DataSet();
-            //string commandThema = "SELECT * FROM Thema";
-            //SQLiteCommand SqlcmdT = new SQLiteCommand();
-            //SqlcmdT.CommandType = System.Data.CommandType.Text;
-            //SqlcmdT.CommandText = commandThema;
-            //SqlcmdT.Connection = connection;
-            //SQLiteDataAdapter dataAdapterCbT = new SQLiteDataAdapter(SqlcmdT);
-            //dataAdapterCbT.Fill(datasetThema);
             
-            //for (int i = 0; i < anzahl; i++)
-            //{
-                
-            //}
+            addObjects add = new addObjects();
+            add.wuerfelnSet(int.Parse(cbWortanzahl.Text), flowpanelTheKat);
 
         }
 
@@ -187,67 +165,41 @@ namespace CreaWordv4
 
         private void tabWort_Enter(object sender, EventArgs e)  
         {
-            //--------------Verbinden und Öffnen der DB
-            //string dir = Directory.GetCurrentDirectory();   //pfadstandpunkt liegt im debug-ordner??
-
-            String dbfilename =  @"\DBank.s3db"; //TODO korrekter Pfad
-            SQLiteConnection connection = new SQLiteConnection();
-
-            connection.ConnectionString = "Data Source = " + /*dir + */dbfilename;
-            connection.Open();
-
+            global global = new global();
             //--------------Einlesen der Themen aus der DB
             listThema.Items.Clear();
+            int tablesCounterT = global.datasetThema.Tables.Count;
+            try
+            {
+                tablesCounterT = global.datasetThema.Tables[global.datasetThema.Tables[0].TableName].Columns.Count;
+            }
+            catch (Exception ex)
+            {
+                string fehler = ex.ToString();
+            }
 
-            //DataSet datasetThema = new DataSet();
-            string commandThema = "SELECT * FROM Thema";
-            SQLiteCommand SqlcmdT = new SQLiteCommand();
-            SqlcmdT.CommandType = System.Data.CommandType.Text;
-            SqlcmdT.CommandText = commandThema;
-            SqlcmdT.Connection = connection;
-            SQLiteDataAdapter dataAdapterT = new SQLiteDataAdapter(SqlcmdT);
-            dataAdapterT.Fill(datasetThema);
-            int tablesCounterT = datasetThema.Tables[datasetThema.Tables[0].TableName].Columns.Count;
             for (int i = 0; i < tablesCounterT; i++)
             {
-                ListViewItem lviThema = new ListViewItem(datasetThema.Tables[datasetThema.Tables[0].TableName].Rows[i]["ID"].ToString());
-                lviThema.SubItems.Add((String)datasetThema.Tables[datasetThema.Tables[0].TableName].Rows[i]["BEZ"]);
+                ListViewItem lviThema = new ListViewItem(global.datasetThema.Tables[global.datasetThema.Tables[0].TableName].Rows[i]["ID"].ToString());
+                lviThema.SubItems.Add((String)global.datasetThema.Tables[global.datasetThema.Tables[0].TableName].Rows[i]["BEZ"]);
                 listThema.Items.Add(lviThema);
             }
-            //listThema.Items[0].Focused = true;
-            listThema.Items[0].Selected = true;
-            listThema.Select();
 
-
-            //--------------Einlesen der Kategorien aus der DB
-            //DataSet datasetKategorie = new DataSet();
-            string commandKat = "SELECT * FROM Kategorie";
-            SQLiteCommand SqlcmdK = new SQLiteCommand();
-            SqlcmdK.CommandType = System.Data.CommandType.Text;
-            SqlcmdK.CommandText = commandKat;
-            SqlcmdK.Connection = connection;
-            SQLiteDataAdapter dataAdapterK = new SQLiteDataAdapter(SqlcmdK);
-            dataAdapterK.Fill(datasetKategorie);
-
-
-            //---------------Einlesen der Wörter aus der DB
-            //DataSet datasetWort = new DataSet();
-            string commandW = "SELECT * FROM Wort";
-            SQLiteCommand SqlcmdW = new SQLiteCommand();
-            SqlcmdW.CommandType = System.Data.CommandType.Text;
-            SqlcmdW.CommandText = commandW;
-            SqlcmdW.Connection = connection;
-            SQLiteDataAdapter dataAdapterW = new SQLiteDataAdapter(SqlcmdW);
-            dataAdapterW.Fill(datasetWort);
-            
-            
-
-            //---------------Schließen der DB-Verbingung
-            connection.Close();
+            if (listThema.Items.Count > 0)
+            {
+                listThema.Items[0].Focused = true;
+                listThema.Items[0].Selected = true;
+                listThema.Select();
+            }
+            else
+            {
+                int count = listThema.Items.Count;
+            }
         }
 
         private void listThema_SelectedIndexChanged(object sender, EventArgs e)
         {
+            global global = new global();
             //Rund 1: Thema = 1; Kategorie = ok / Runde 2: Thema = 2; Kategorie = ko / Runde 3: Thema = ko --> häääää???????????????????? --> TODO!!!!!!!!!
 
             listKategorie.Items.Clear();
@@ -266,20 +218,20 @@ namespace CreaWordv4
                 testColl = listThema.SelectedItems;
                 string siItem = testColl[0]/*.SubItems[0]*/.Text;
 
-                int tablesCounterK = datasetKategorie.Tables[datasetKategorie.Tables[0].TableName].Columns.Count;
+                int tablesCounterK = global.datasetKategorie.Tables[global.datasetKategorie.Tables[0].TableName].Columns.Count;
                 for (int i = 0; i < tablesCounterK; i++)
                 {
-                    if (datasetKategorie.Tables[datasetKategorie.Tables[0].TableName].Rows[i]["Thema"].ToString() == siItem)
+                    if (global.datasetKategorie.Tables[global.datasetKategorie.Tables[0].TableName].Rows[i]["Thema"].ToString() == siItem)
                     {
-                        ListViewItem lviKategorie = new ListViewItem(datasetKategorie.Tables[datasetKategorie.Tables[0].TableName].Rows[i]["ID"].ToString());
-                        lviKategorie.SubItems.Add((String)datasetKategorie.Tables[datasetKategorie.Tables[0].TableName].Rows[i]["BEZ"]);
+                        ListViewItem lviKategorie = new ListViewItem(global.datasetKategorie.Tables[global.datasetKategorie.Tables[0].TableName].Rows[i]["ID"].ToString());
+                        lviKategorie.SubItems.Add((String)global.datasetKategorie.Tables[global.datasetKategorie.Tables[0].TableName].Rows[i]["BEZ"]);
                         listKategorie.Items.Add(lviKategorie);
                     }
                 }
                 int katCount = listKategorie.Items.Count;
                 if (katCount > 0)
                 {
-                    listThema.Items[siItem].Selected = true;    //test
+                    listThema.Items[0].Selected = true;    //test
                     listKategorie.Items[0].Focused = true;
                     listKategorie.Items[0].Selected = true;
                     listKategorie.Select();
@@ -296,6 +248,7 @@ namespace CreaWordv4
 
         private void listKategorie_SelectedIndexChanged(object sender, EventArgs e)
         {
+            global global = new global();
             listWort.Items.Clear();
             ListView.SelectedListViewItemCollection testColl2 = new ListView.SelectedListViewItemCollection(listKategorie);
             
@@ -304,13 +257,13 @@ namespace CreaWordv4
             {
                 string siItem2 = testColl2[0]/*.SubItems[0]*/.Text;
 
-                int tablesCounterW = datasetWort.Tables[datasetWort.Tables[0].TableName].Columns.Count;
+                int tablesCounterW = global.datasetWort.Tables[global.datasetWort.Tables[0].TableName].Columns.Count;
                 for (int i = 0; i < tablesCounterW; i++)
                 {
-                    if (datasetWort.Tables[datasetWort.Tables[0].TableName].Rows[i]["Kategorie"].ToString() == siItem2)
+                    if (global.datasetWort.Tables[global.datasetWort.Tables[0].TableName].Rows[i]["Kategorie"].ToString() == siItem2)
                     {
-                        ListViewItem lviWort = new ListViewItem(datasetWort.Tables[datasetWort.Tables[0].TableName].Rows[i]["ID"].ToString());
-                        lviWort.SubItems.Add((String)datasetWort.Tables[datasetWort.Tables[0].TableName].Rows[i]["BEZ"]);
+                        ListViewItem lviWort = new ListViewItem(global.datasetWort.Tables[global.datasetWort.Tables[0].TableName].Rows[i]["ID"].ToString());
+                        lviWort.SubItems.Add((String)global.datasetWort.Tables[global.datasetWort.Tables[0].TableName].Rows[i]["BEZ"]);
                         listWort.Items.Add(lviWort);
                     }
                 }
@@ -326,21 +279,76 @@ namespace CreaWordv4
             }
 
         }
-
-        private void listThema_ItemActivate(object sender, EventArgs e)
-        {
-            
-        }
-
+        
         private void listThema_ColumnWidthChanging(object sender, ColumnWidthChangingEventArgs e)   //wird auch von listKategorie und listWort verwendet
         {
             e.Cancel = true;
             e.NewWidth = listThema.Columns[e.ColumnIndex].Width;
         }
+        
+        private void menuStrip_Layout(object sender, LayoutEventArgs e)
+        {
+            t.Interval = 1000;
+            t.Tick += new EventHandler(this.t_Tick);
+            t.Start();
 
+            DateTime d = DateTime.Now;
+            toolStripTextBoxDatum.Text = d.Date.ToShortDateString().ToString(/*"dd/MM/yyyy"*/);
+            
+        }
+        private void t_Tick(object sender, EventArgs e )
+        {
+            int hh = DateTime.Now.Hour;
+            int mm = DateTime.Now.Minute;
+            int ss = DateTime.Now.Second;
+
+            string time = "";
+
+            if (hh < 10)
+            {
+                time += "0" + hh;
+            }
+            else
+            {
+                time += hh;
+            }
+            time += ":";
+
+            if (mm < 10)
+            {
+                time += "0" + mm;
+            }
+            else
+            {
+                time += mm;
+            }
+            time += ":";
+
+            if (ss < 10)
+            {
+                time += "0" + ss;
+            }
+            else
+            {
+                time += ss;
+            }
+            toolStripTextBoxUhr.Text = time;
+        }
+
+//---------Menü Bearbeiten---------------------------------------------------------------
         private void menuitemBeaWort_Click(object sender, EventArgs e)
         {
-            this.tabWort.Show();    //TODO tabWort zeigen
+            tabControl.SelectTab(tabWort);
+        }
+
+        private void menuitemBeaFavo_Click(object sender, EventArgs e)
+        {
+            tabControl.SelectTab(tabFavo);
+        }
+
+        private void menuitemBeaListen_Click(object sender, EventArgs e)
+        {
+            tabControl.SelectTab(tabListen);
         }
     }
 }
