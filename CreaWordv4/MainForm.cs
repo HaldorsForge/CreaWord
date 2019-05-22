@@ -172,7 +172,6 @@ namespace CreaWordv4
 
         private void tabWort_Enter(object sender, EventArgs e)
         {
-            global global = new global();
             //--------------Einlesen der Themen aus der DB
             var repository = new ThemaRepository(dbConnection);
             listThema.Items.Clear();
@@ -193,7 +192,6 @@ namespace CreaWordv4
 
         private void listThema_SelectedIndexChanged(object sender, EventArgs e)
         {
-            global global = new global();
             //Rund 1: Thema = 1; Kategorie = ok / Runde 2: Thema = 2; Kategorie = ko / Runde 3: Thema = ko --> häääää???????????????????? --> TODO!!!!!!!!!            
             listKategorie.Items.Clear();
 
@@ -222,7 +220,6 @@ namespace CreaWordv4
 
         private void listKategorie_SelectedIndexChanged(object sender, EventArgs e)
         {
-            global global = new global();
             listWort.Items.Clear();
             var repository = new WortRepository(dbConnection);
             foreach (var wort in repository.GetWorts())
