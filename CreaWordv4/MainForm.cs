@@ -9,17 +9,24 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SQLite;
 using System.IO;
+using CreaWordv4.Repositories;
 
 namespace CreaWordv4
 {
-    public partial class MainForm : Form { 
-    
+    public partial class MainForm : Form
+    {
+
+        private readonly IDbConnection dbConnection;
         public MainForm()
         {
+            // Do DB initialisation first to avoid the user can click buttons befor.
+            dbConnection = new SQLiteConnection();
+            dbConnection.ConnectionString = "Data Source = " + @".\DBank.s3db";
+            dbConnection.Open();
             InitializeComponent();
         }
 
-        createTable tables;
+        //createTable tables;
         //DBLoad dbLoad;
         //global global;
 
@@ -27,20 +34,20 @@ namespace CreaWordv4
 
         private void MainForm_Load(object sender, EventArgs e)
         {
-            tables.Thema();
-            tables.Kategorie();
-            tables.Wort();
-            tables.Favorit();
-            tables.Liste();
+            //tables.Thema();
+            //tables.Kategorie();
+            //tables.Wort();
+            //tables.Favorit();
+            //tables.Liste();
 
-            
-           
+
+
         }
 
         private void tabWuerfeln_Layout(object sender, LayoutEventArgs e)
         {
-            DBLoad dbLoad = new DBLoad();
-            dbLoad.Load();  //Einlesen der DB-Inhalte in die Datasets
+            //DBLoad dbLoad = new DBLoad();
+            //dbLoad.Load();  //Einlesen der DB-Inhalte in die Datasets
             DateTime d = DateTime.Now; // frühling(3-5), sommer(6-8), herbst(9-11), winter(12-2)
             int month = d.Month;
             if (month >= 3 && month <= 5)
@@ -58,10 +65,10 @@ namespace CreaWordv4
             else
             {
                 tabWuerfeln.BackgroundImage = CreaWordv4.Properties.Resources.Winter;
-                
+
             }
 
-            cbWortanzahl.Select(0,1);
+            cbWortanzahl.Select(0, 1);
 
             string dir = Directory.GetCurrentDirectory();
             textBox1.Text = dir;
@@ -73,14 +80,14 @@ namespace CreaWordv4
             anzahl = int.Parse(cbWortanzahl.Text);
 
             addObjects add = new addObjects();
-            add.wuerfelnWort(anzahl,flowpanelWort);
+            add.wuerfelnWort(anzahl, flowpanelWort);
             add.wuerfelnOpts(flowpanelOptButtons);
-            
+
         }
 
         private void cbWortanzahl_SelectedIndexChanged(object sender, EventArgs e)
         {
-            
+
             addObjects add = new addObjects();
             add.wuerfelnSet(int.Parse(cbWortanzahl.Text), flowpanelTheKat);
 
@@ -163,129 +170,82 @@ namespace CreaWordv4
             }
         }
 
-        private void tabWort_Enter(object sender, EventArgs e)  
+        private void tabWort_Enter(object sender, EventArgs e)
         {
-            global global = new global();
             //--------------Einlesen der Themen aus der DB
+            var repository = new ThemaRepository(dbConnection);
             listThema.Items.Clear();
-            int tablesCounterT = global.datasetThema.Tables.Count;
-            try
+            foreach (var thema in repository.GetThemas())
             {
-                tablesCounterT = global.datasetThema.Tables[global.datasetThema.Tables[0].TableName].Columns.Count;
-            }
-            catch (Exception ex)
-            {
-                string fehler = ex.ToString();
-            }
-
-            for (int i = 0; i < tablesCounterT; i++)
-            {
-                ListViewItem lviThema = new ListViewItem(global.datasetThema.Tables[global.datasetThema.Tables[0].TableName].Rows[i]["ID"].ToString());
-                lviThema.SubItems.Add((String)global.datasetThema.Tables[global.datasetThema.Tables[0].TableName].Rows[i]["BEZ"]);
+                var lviThema = new ListViewItem(thema.ID.ToString());
+                lviThema.SubItems.Add(thema.BEZ);
                 listThema.Items.Add(lviThema);
             }
-
+            // Set the focus in the table on the first element
             if (listThema.Items.Count > 0)
             {
                 listThema.Items[0].Focused = true;
                 listThema.Items[0].Selected = true;
                 listThema.Select();
             }
-            else
-            {
-                int count = listThema.Items.Count;
-            }
         }
 
         private void listThema_SelectedIndexChanged(object sender, EventArgs e)
         {
-            global global = new global();
-            //Rund 1: Thema = 1; Kategorie = ok / Runde 2: Thema = 2; Kategorie = ko / Runde 3: Thema = ko --> häääää???????????????????? --> TODO!!!!!!!!!
-
+            //Rund 1: Thema = 1; Kategorie = ok / Runde 2: Thema = 2; Kategorie = ko / Runde 3: Thema = ko --> häääää???????????????????? --> TODO!!!!!!!!!            
             listKategorie.Items.Clear();
-            ListView.SelectedListViewItemCollection testColl = new ListView.SelectedListViewItemCollection(listThema);
 
             //string dsKat = datasetKategorie.Tables[datasetKategorie.Tables[0].TableName].Rows[0]["Thema"].ToString();
 
-            testColl = listThema.SelectedItems;
-            if (testColl.Count == 0)    //test
+            // read data from the datasource
+            var repository = new KategorieRepository(dbConnection);
+            foreach (var kategorie in repository.GetKategories())
             {
-                listThema.Items[1].Selected = true;
-                listThema.Select();
-            }
-            if (testColl.Count > 0)
-            {
-                testColl = listThema.SelectedItems;
-                string siItem = testColl[0]/*.SubItems[0]*/.Text;
-
-                int tablesCounterK = global.datasetKategorie.Tables[global.datasetKategorie.Tables[0].TableName].Columns.Count;
-                for (int i = 0; i < tablesCounterK; i++)
-                {
-                    if (global.datasetKategorie.Tables[global.datasetKategorie.Tables[0].TableName].Rows[i]["Thema"].ToString() == siItem)
-                    {
-                        ListViewItem lviKategorie = new ListViewItem(global.datasetKategorie.Tables[global.datasetKategorie.Tables[0].TableName].Rows[i]["ID"].ToString());
-                        lviKategorie.SubItems.Add((String)global.datasetKategorie.Tables[global.datasetKategorie.Tables[0].TableName].Rows[i]["BEZ"]);
-                        listKategorie.Items.Add(lviKategorie);
-                    }
-                }
-                int katCount = listKategorie.Items.Count;
-                if (katCount > 0)
-                {
-                    listThema.Items[0].Selected = true;    //test
-                    listKategorie.Items[0].Focused = true;
-                    listKategorie.Items[0].Selected = true;
-                    listKategorie.Select();
-                }
-            }
-            else
-            {
-                ListViewItem lviKategorie = new ListViewItem("!!!");
-                lviKategorie.SubItems.Add("SelectedListViewItemCollection = null!!");
+                var lviKategorie = new ListViewItem(kategorie.ID.ToString());
+                lviKategorie.SubItems.Add(kategorie.BEZ);
                 listKategorie.Items.Add(lviKategorie);
             }
 
+            // select the first item in the table
+            if (listKategorie.Items.Count > 0)
+            {
+                listKategorie.Items[0].Selected = true;    //test
+                listKategorie.Items[0].Focused = true;
+                listKategorie.Items[0].Selected = true;
+                listKategorie.Select();
+            }
+
+            // TODO: I remove here some logic. I don't know what it was doing. Hopefully it was not important 🤞          
         }
 
         private void listKategorie_SelectedIndexChanged(object sender, EventArgs e)
         {
-            global global = new global();
             listWort.Items.Clear();
-            ListView.SelectedListViewItemCollection testColl2 = new ListView.SelectedListViewItemCollection(listKategorie);
-            
-            testColl2 = listKategorie.SelectedItems;
-            if (testColl2.Count > 0)
+            var repository = new WortRepository(dbConnection);
+            foreach (var wort in repository.GetWorts())
             {
-                string siItem2 = testColl2[0]/*.SubItems[0]*/.Text;
-
-                int tablesCounterW = global.datasetWort.Tables[global.datasetWort.Tables[0].TableName].Columns.Count;
-                for (int i = 0; i < tablesCounterW; i++)
-                {
-                    if (global.datasetWort.Tables[global.datasetWort.Tables[0].TableName].Rows[i]["Kategorie"].ToString() == siItem2)
-                    {
-                        ListViewItem lviWort = new ListViewItem(global.datasetWort.Tables[global.datasetWort.Tables[0].TableName].Rows[i]["ID"].ToString());
-                        lviWort.SubItems.Add((String)global.datasetWort.Tables[global.datasetWort.Tables[0].TableName].Rows[i]["BEZ"]);
-                        listWort.Items.Add(lviWort);
-                    }
-                }
-                //listWort.Items[0].Focused = true;
-                listWort.Items[0].Selected = true;
-                listWort.Select();
-            }
-            else
-            {
-                ListViewItem lviWort = new ListViewItem("!!!");
-                lviWort.SubItems.Add("SelectedListViewItemCollection = null!!");
+                var lviWort = new ListViewItem(wort.ID.ToString());
+                lviWort.SubItems.Add(wort.BEZ);
                 listWort.Items.Add(lviWort);
             }
 
+            if (listWort.Items.Count > 0)
+            {
+                listWort.Items[0].Selected = true;    //test
+                listWort.Items[0].Focused = true;
+                listWort.Items[0].Selected = true;
+                listWort.Select();
+            }
+
+            // TODO: I remove here some logic. I don't know what it was doing. Hopefully it was not important 🤞          
         }
-        
+
         private void listThema_ColumnWidthChanging(object sender, ColumnWidthChangingEventArgs e)   //wird auch von listKategorie und listWort verwendet
         {
             e.Cancel = true;
             e.NewWidth = listThema.Columns[e.ColumnIndex].Width;
         }
-        
+
         private void menuStrip_Layout(object sender, LayoutEventArgs e)
         {
             t.Interval = 1000;
@@ -294,9 +254,9 @@ namespace CreaWordv4
 
             DateTime d = DateTime.Now;
             toolStripTextBoxDatum.Text = d.Date.ToShortDateString().ToString(/*"dd/MM/yyyy"*/);
-            
+
         }
-        private void t_Tick(object sender, EventArgs e )
+        private void t_Tick(object sender, EventArgs e)
         {
             int hh = DateTime.Now.Hour;
             int mm = DateTime.Now.Minute;
@@ -335,7 +295,7 @@ namespace CreaWordv4
             toolStripTextBoxUhr.Text = time;
         }
 
-//---------Menü Bearbeiten---------------------------------------------------------------
+        //---------Menü Bearbeiten---------------------------------------------------------------
         private void menuitemBeaWort_Click(object sender, EventArgs e)
         {
             tabControl.SelectTab(tabWort);
@@ -349,6 +309,12 @@ namespace CreaWordv4
         private void menuitemBeaListen_Click(object sender, EventArgs e)
         {
             tabControl.SelectTab(tabListen);
+        }
+
+        public void Dispose()
+        {
+            dbConnection.Close();
+            dbConnection.Dispose();
         }
     }
 }
